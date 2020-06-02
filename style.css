@@ -1,0 +1,770 @@
+@charset "UTF-8";
+/* DOCUMENT INFORMATION
+    - Document: DIABLO IV Thème
+    - Version : 1.0.1 du 24/05/2020
+    - Auteur: Vincent - 18/05/2020 
+*/
+/* COLORS
+    - default body text     white
+    - h1                    white
+    - h2                    white
+    - h3                    white
+    - h4                    white
+    - p                     white
+
+    - button                orange
+
+    - button:hover          rgb(170, 13, 13)      
+
+    - icon                  white             
+
+    - border:               white           
+*/
+/* FONTS
+    - Default:              'New Rocker'
+*/
+/* CSS DIRECTORY
+    0.  GLOBAL
+            0.1 navigation
+            0.2 boutons
+    1.  HEADER
+            1.1 contacts
+            1.2 titre + menu
+            1.3 phrases slogan + bouton contact us
+    2.  WELCOME TO OUR THEME
+            2.1 texte à gauche
+            2.2 photo à droite
+    3.  OUR INDUSTRIES
+    4.  WE ADVICE YOU
+    5.  MEAT OUR TEAM
+            5.1 photos
+            5.2 icones
+    6.  WHAT PEOPLE SAY
+    7.  FOOTER
+            7.1 partie gauche
+                7.1.1 partie texte
+                7.1.2 partie réseaux sociaux
+                7.1.3 barre subscrise
+            7.2 partie centrale
+            7.3 partie droite
+            7.4 ligne de copyright
+*/
+/* ============================== 0. GLOBAL ============================== */
+/* bases SASS */
+/* fin SASS */
+body {
+  background-image: url(ressources/images/logo2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  opacity: 0;
+  transition: 2s;
+}
+body:hover {
+  opacity: 1;
+}
+
+@media all and (max-width: 1366px) {
+  body {
+    opacity: 1;
+  }
+  body:hover {
+    opacity: 1;
+  }
+}
+section {
+  margin: 0;
+  margin-top: 50px;
+  padding: 0;
+  background-attachment: local, scroll;
+}
+
+.container-fluid {
+  padding: auto;
+  margin: auto;
+}
+
+div .col-md-4 {
+  padding: auto;
+  margin: 0;
+}
+
+h1 {
+  font-family: "New Rocker", cursive;
+  text-align: center;
+  text-transform: uppercase;
+  word-spacing: 10px;
+}
+
+h2,
+h3,
+h4 {
+  font-family: "New Rocker", cursive;
+  text-align: center;
+  text-transform: uppercase;
+  word-spacing: 10px;
+  color: white;
+}
+
+p {
+  font-family: "New Rocker", cursive;
+  color: white;
+  font-size: 1.1em;
+}
+
+/* 0.1 navigation */
+/* 0.2 boutons */
+/* ============================== 1. HEADER ============================== */
+header {
+  background-image: url(ressources/images/header.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+/* 1.1 contacts */
+.barre-contact-hdp {
+  color: white;
+}
+.barre-contact-hdp p {
+  font-size: 120%;
+  margin: auto;
+  line-height: 30px;
+  margin-top: 10px;
+  width: 150px;
+  text-align: center;
+  color: white;
+}
+.barre-contact-hdp p:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: #aa0d0d;
+  transition: 0.75s;
+  font-size: 132%;
+}
+.barre-contact-hdp .mail-hdp {
+  color: orange;
+}
+@media all and (max-width: 1366px) {
+  .barre-contact-hdp .mail-hdp {
+    display: none;
+  }
+}
+
+/* 1.2 titre + menu */
+.navbar {
+  margin-top: 50px;
+}
+
+.menu {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-family: "New Rocker", cursive;
+  border-radius: 5px;
+  transition: 0.75s;
+}
+.menu:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.contenu-menu {
+  padding: 0 20px;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 30px;
+  font-size: 110%;
+}
+.contenu-menu:hover {
+  transition: 0.75s;
+  color: #aa0d0d;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* 1.3 phrases slogan + bouton contact us */
+.phrases-slogan-hdp {
+  margin-top: 350px;
+  color: white;
+}
+.phrases-slogan-hdp h1 {
+  font-size: 4em;
+  font-weight: bold;
+  color: #aa0d0d;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.phrases-slogan-hdp .hover-h1 {
+  transition: 0.75s;
+}
+.phrases-slogan-hdp .hover-h1:hover {
+  color: orange;
+  text-shadow: 0 0 25px #aa0d0d;
+}
+.phrases-slogan-hdp h3 {
+  font-size: 1.75em;
+}
+.phrases-slogan-hdp .button-hdp {
+  margin: auto;
+  font-size: 1em;
+  width: 250px;
+  padding: 10px;
+  border: 2px solid rgba(58, 58, 58, 0.5);
+  border-radius: 5px;
+  color: rgba(58, 58, 58, 0.5);
+  text-decoration: none;
+  background-color: orange;
+  transition: 0.75s;
+}
+.phrases-slogan-hdp .button-hdp:hover {
+  box-shadow: inset 0 25px 25px #aa0d0d;
+}
+
+@media all and (max-width: 1366px) {
+  .phrases-slogan-hdp {
+    margin-top: 100px;
+  }
+  .phrases-slogan-hdp h1 {
+    font-size: 2.5em;
+  }
+  .phrases-slogan-hdp h3 {
+    font-size: 1.25em;
+  }
+}
+.lien-d4 {
+  color: orange;
+}
+.lien-d4:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: #aa0d0d;
+  transition: 0.75s;
+  font-size: 110%;
+}
+
+@media all and (width: 568px) and (height: 320px) {
+  .button-hdp {
+    display: none;
+  }
+}
+/* ============================== 2. WELCOME TO OUR THEME ============================== */
+#welcome-to-our-theme {
+  background-color: rgba(58, 58, 58, 0.5);
+  /* 2.1 texte à gauche */
+}
+#welcome-to-our-theme h2 {
+  font-size: 2.25em;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+#welcome-to-our-theme p {
+  padding-bottom: 50px;
+  text-align: justify;
+}
+
+.texte-gauche h2:after {
+  display: block;
+  height: 2px;
+  background-color: white;
+  width: 100px;
+  content: " ";
+  margin: 0 auto;
+  margin-top: 26px;
+  margin-bottom: 46px;
+}
+
+/* 2.2 image à droite */
+.image-droite img {
+  border: 2px solid white;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  opacity: 1;
+  transition: 4s;
+}
+.image-droite img:hover {
+  border: 2px solid #aa0d0d;
+  opacity: 0;
+}
+
+@media all and (max-width: 1366px) {
+  .image-droite img {
+    display: none;
+  }
+
+  .image-droite {
+    border: 2px solid white;
+    background-image: url(ressources/images/02full.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+}
+@media all and (max-width: 767px) {
+  .texte-gauche {
+    border: 2px solid white;
+    background-image: url(ressources/images/02full.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+}
+/* ============================== 3. OUR INDUSTRIES ============================== */
+#our-industries {
+  background-color: rgba(58, 58, 58, 0.5);
+}
+#our-industries .pictogramme {
+  max-width: 1600px;
+}
+#our-industries .case-our-industries {
+  text-align: center;
+}
+#our-industries h2 {
+  font-size: 2.25em;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+#our-industries h3 {
+  font-size: 1.5em;
+}
+#our-industries p {
+  padding-bottom: 50px;
+}
+#our-industries img {
+  border-radius: 50%;
+  transition: 0.75s;
+}
+#our-industries img:hover {
+  box-shadow: 0 0 50px #aa0d0d, inset 0 0 100px black;
+}
+#our-industries .shapes {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+/* ============================== 4. WE ADVICE YOU ============================== */
+#we-advice-you {
+  background-image: url(ressources/images/03.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+#we-advice-you .pictogramme {
+  max-width: 1600px;
+}
+#we-advice-you h2 {
+  font-size: 2.25em;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+#we-advice-you .case-we-advice-you h3 {
+  font-size: 4em;
+}
+#we-advice-you .case-we-advice-you p {
+  text-align: center;
+  padding-bottom: 50px;
+  font-size: 1.7em;
+}
+
+/* ============================== 5. MEAT OUR TEAM ============================== */
+#meat-our-team {
+  background-color: rgba(58, 58, 58, 0.5);
+}
+#meat-our-team .meat-our-team {
+  max-width: 1600px;
+}
+#meat-our-team h2 {
+  font-size: 2.25em;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+#meat-our-team h3 {
+  font-size: 1.35em;
+  margin-top: 20px;
+  text-align: left;
+  text-transform: none;
+}
+#meat-our-team p {
+  font-size: 1em;
+  text-align: justify;
+}
+#meat-our-team .team-phone {
+  padding-bottom: 50px;
+  text-align: left;
+  color: orange;
+}
+
+/* 5.1 photos */
+.meat-our-team-portrait {
+  text-align: center;
+}
+.meat-our-team-portrait img {
+  width: 100%;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+.meat-our-team-portrait img:hover {
+  -webkit-filter: grayscale(100%);
+  /* Pour les navigateurs Chrome, Safari, Opera */
+  filter: grayscale(100%);
+  /* Firefox */
+  padding: 25px;
+}
+
+/* 5.2 pictogrammes */
+.meat-our-team-picto {
+  text-align: center;
+}
+.meat-our-team-picto img {
+  width: 100%;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 50%;
+  transition: 0.75s;
+}
+.meat-our-team-picto img:hover {
+  box-shadow: 0 0 50px #aa0d0d, inset 0 0 100px black;
+}
+.meat-our-team-picto .shapes {
+  width: 100px;
+  margin-bottom: 50px;
+}
+
+/* ============================== 6. WHAT PEOPLE SAY ============================== */
+#what-people-say {
+  background-color: rgba(58, 58, 58, 0.5);
+}
+#what-people-say h2 {
+  font-size: 2.25em;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+#what-people-say h3 {
+  font-size: 1.35em;
+  text-transform: none;
+  margin-bottom: 10px;
+}
+#what-people-say p {
+  text-align: justify;
+  padding: 0 20px;
+  margin-top: 10px;
+  font-size: 1em;
+}
+#what-people-say .under-picture {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+div .col-md-6 {
+  display: flex;
+  text-align: center;
+}
+div .col-md-6 .people-a,
+div .col-md-6 .people-b,
+div .col-md-6 .people-c,
+div .col-md-6 .people-d {
+  border: 2px solid white;
+  transition: 1s;
+}
+div .col-md-6 .people-a:hover,
+div .col-md-6 .people-b:hover,
+div .col-md-6 .people-c:hover,
+div .col-md-6 .people-d:hover {
+  border: 2px solid #aa0d0d;
+  box-shadow: 0 0 25px #aa0d0d;
+}
+div .col-md-6 img {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.mini-shapes {
+  width: 25px;
+}
+
+@media all and (max-width: 1580px) {
+  #what-people-say h3 {
+    margin-top: 50px;
+  }
+
+  div .col-md-6 {
+    border: 2px solid white;
+    max-width: 48%;
+    min-width: 48%;
+  }
+
+  div .bg-people-a {
+    background-image: url(ressources/images/05a.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 270px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  div .bg-people-b {
+    background-image: url(ressources/images/05b.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 270px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  div .bg-people-c {
+    background-image: url(ressources/images/05c.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 270px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  div .bg-people-d {
+    background-image: url(ressources/images/05d.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 270px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  div .col-md-6 {
+    margin: center;
+  }
+
+  .people-a,
+.people-b,
+.people-c,
+.people-d {
+    display: none;
+  }
+
+  .under-picture {
+    display: none;
+  }
+}
+@media all and (max-width: 910px) {
+  div .col-md-6 {
+    max-width: 95%;
+    min-width: 95%;
+  }
+}
+/* ============================== 7. FOOTER ============================== */
+#footer {
+  background-image: url(ressources/images/07.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  /* 7.1 partie gauche */
+  /* 7.1.1 partie texte */
+}
+#footer h2 {
+  font-size: 2.75em;
+  padding-top: 100px;
+  padding-bottom: 25px;
+  text-align: left;
+}
+#footer h3 {
+  font-size: 1.5em;
+  padding-top: 80px;
+  padding-bottom: 25px;
+}
+#footer h4 {
+  font-size: 1.5em;
+  text-transform: none;
+  text-align: left;
+}
+#footer .p-business {
+  text-align: justify;
+  margin-bottom: 80px;
+}
+
+.bloc-footer:after {
+  display: block;
+  height: 2px;
+  background-color: white;
+  width: 90%;
+  content: " ";
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* 7.1.2 partie réseaux sociaux */
+.followers {
+  color: orange;
+}
+.followers:after {
+  display: block;
+  height: 2px;
+  background-color: white;
+  width: 100%;
+  content: " ";
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.pre-rezosocio {
+  line-height: 50px;
+}
+
+.rezosocio {
+  margin-left: 10px;
+  color: orange;
+}
+.rezosocio:hover {
+  color: #aa0d0d;
+  text-shadow: 1px 1px 3px black;
+  margin-top: 1px;
+  transition: 0.5s;
+}
+
+/* 7.1.3 barre subscrise */
+.form {
+  display: flex;
+  margin-top: 30px;
+}
+
+.message {
+  width: 200px;
+}
+
+.button {
+  background-color: orange;
+  transition: 0.75s;
+}
+.button:hover {
+  box-shadow: inset 0 15px 15px #aa0d0d;
+}
+
+/* 7.2 partie centrale */
+div .case-blog {
+  display: flex;
+  min-width: 100%;
+  padding: 0 15px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+div .case-blog p {
+  text-align: center;
+}
+div .case-blog a {
+  width: 75%;
+}
+div .case-blog img {
+  border: 2px solid white;
+  width: 100%;
+  transition: 1s;
+}
+div .case-blog img:hover {
+  border: 2px solid #aa0d0d;
+  box-shadow: 0 0 25px #aa0d0d;
+}
+
+.date {
+  color: orange;
+}
+
+@media all and (max-width: 1580px) {
+  div .bg-blog-a {
+    background-image: url(ressources/images/06a.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-bottom: 20px;
+    border: 2px solid white;
+  }
+
+  div .bg-blog-b {
+    background-image: url(ressources/images/06b.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-bottom: 20px;
+    border: 2px solid white;
+  }
+
+  div .bg-blog-c {
+    background-image: url(ressources/images/06c.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    border: 2px solid white;
+  }
+
+  .blog-a,
+.blog-b,
+.blog-c {
+    display: none;
+  }
+}
+/* 7.3 partie droite */
+div .total-rubik {
+  margin: 0;
+  padding: 0;
+}
+
+div .famille-details {
+  max-width: 33%;
+  padding: 0 0.5%;
+  margin: auto;
+}
+
+div .rubik {
+  padding: 0;
+  max-width: 100%;
+}
+
+.famille-details img {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid white;
+  width: 100%;
+  margin-bottom: 4%;
+  opacity: 1;
+  transition: 1s;
+}
+.famille-details img:hover {
+  border: 2px solid #aa0d0d;
+  opacity: 0;
+}
+
+/* 7.4 ligne de copyright */
+div .copyright p {
+  margin: auto;
+  margin-bottom: 20px;
+  line-height: 30px;
+  width: 175px;
+  text-align: center;
+}
+div .copyright .realisation {
+  width: 250px;
+}
+div .copyright .mail {
+  color: orange;
+}
+div .copyright .mail:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: #aa0d0d;
+  transition: 0.75s;
+  font-size: 110%;
+}
+
+/*# sourceMappingURL=style.css.map */
