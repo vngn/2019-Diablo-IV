@@ -1,0 +1,860 @@
+/* DOCUMENT INFORMATION
+    - Document: DIABLO IV Thème
+    - Version : 1.0.1 du 24/05/2020
+    - Auteur: Vincent - 18/05/2020 
+*/
+
+/* COLORS
+    - default body text     white
+    - h1                    white
+    - h2                    white
+    - h3                    white
+    - h4                    white
+    - p                     white
+
+    - button                orange
+
+    - button:hover          rgb(170, 13, 13)      
+
+    - icon                  white             
+
+    - border:               white           
+*/
+
+/* FONTS
+    - Default:              'New Rocker'
+*/
+
+/* CSS DIRECTORY
+    0.  GLOBAL
+            0.1 navigation
+            0.2 boutons
+    1.  HEADER
+            1.1 contacts
+            1.2 titre + menu
+            1.3 phrases slogan + bouton contact us
+    2.  WELCOME TO OUR THEME
+            2.1 texte à gauche
+            2.2 photo à droite
+    3.  OUR INDUSTRIES
+    4.  WE ADVICE YOU
+    5.  MEAT OUR TEAM
+            5.1 photos
+            5.2 icones
+    6.  WHAT PEOPLE SAY
+    7.  FOOTER
+            7.1 partie gauche
+                7.1.1 partie texte
+                7.1.2 partie réseaux sociaux
+                7.1.3 barre subscrise
+            7.2 partie centrale
+            7.3 partie droite
+            7.4 ligne de copyright
+*/
+
+/* ============================== 0. GLOBAL ============================== */
+
+/* bases SASS */
+
+$border-color: white;
+$hover-color: rgb(170, 13, 13);
+$text-color: white;
+$href-color: orange;
+$bg-opacity: rgba(58, 58, 58, 0.5);
+
+@mixin hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: $hover-color;
+    transition: 0.75s;
+}
+
+@mixin background {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin font {
+    font-family: 'New Rocker', cursive;
+    text-align: center;
+    text-transform: uppercase;
+    word-spacing: 10px;
+}
+
+@mixin bg-people {
+    height: 270px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+/* fin SASS */
+
+body {
+    background-image: url(ressources/images/logo2.jpg);
+    @include background;
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    opacity: 0;
+    transition: 2s;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+@media all and (max-width: 1366px) {
+    body {
+        opacity: 1;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+section {
+    margin: 0;
+    margin-top: 50px;
+    padding: 0;
+    background-attachment: local, scroll;
+}
+
+.container-fluid {
+    padding: auto;
+    margin: auto;
+}
+
+div .col-md-4 {
+    padding: auto;
+    margin: 0;
+}
+
+h1 {
+    @include font;
+}
+
+h2,
+h3,
+h4 {
+    @include font;
+    color: $text-color;
+}
+
+p {
+    font-family: 'New Rocker', cursive;
+    color: $text-color;
+    font-size: 1.1em;
+}
+
+/* 0.1 navigation */
+
+/* 0.2 boutons */
+
+/* ============================== 1. HEADER ============================== */
+
+header {
+    background-image: url(ressources/images/header.jpg);
+    @include background;
+    height: 100vh;
+    width: 100%;
+}
+
+/* 1.1 contacts */
+
+.barre-contact-hdp {
+    color: $text-color;
+
+    p {
+        font-size: 120%;
+        margin: auto;
+        line-height: 30px;
+        margin-top: 10px;
+        width: 150px;
+        text-align: center;
+        color: $text-color;
+
+        &:hover {
+            @include hover;
+            font-size: 132%;
+        }
+    }
+
+    .mail-hdp {
+        color: $href-color;
+    }
+
+    @media all and (max-width: 1366px) {
+        .mail-hdp {
+            display: none;
+        }
+    }
+}
+
+/* 1.2 titre + menu */
+
+.navbar {
+    margin-top: 50px;
+}
+
+.menu {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-family: 'New Rocker', cursive;
+    border-radius: 5px;
+    transition: 0.75s;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+.contenu-menu {
+    padding: 0 20px;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 30px;
+    font-size: 110%;
+
+    &:hover {
+        transition: 0.75s;
+        color: $hover-color;
+        font-weight: bold;
+        font-style: italic;
+    }
+}
+
+/* 1.3 phrases slogan + bouton contact us */
+
+.phrases-slogan-hdp {
+    margin-top: 350px;
+    color: $text-color;
+
+    h1 {
+        font-size: 4em;
+        font-weight: bold;
+        color: $hover-color;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .hover-h1 {
+        transition: 0.75s;
+
+        &:hover {
+            color: $href-color;
+            text-shadow: 0 0 25px $hover-color;
+        }
+    }
+
+    h3 {
+        font-size: 1.75em;
+    }
+
+    .button-hdp {
+        margin: auto;
+        font-size: 1em;
+        width: 250px;
+        padding: 10px;
+        border: 2px solid $bg-opacity;
+        border-radius: 5px;
+        color: $bg-opacity;
+        text-decoration: none;
+        background-color: $href-color;
+        transition: 0.75s;
+
+        &:hover {
+            box-shadow: inset 0 25px 25px $hover-color;
+        }
+    }
+}
+
+@media all and (max-width: 1366px) {
+    .phrases-slogan-hdp {
+        margin-top: 100px;
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h3 {
+            font-size: 1.25em;
+        }
+    }
+}
+
+.lien-d4 {
+    color: $href-color;
+
+    &:hover {
+        @include hover;
+        font-size: 110%;
+    }
+}
+
+@media all and (width: 568px) and (height: 320px) {
+    .button-hdp {
+        display: none;
+    }
+}
+
+/* ============================== 2. WELCOME TO OUR THEME ============================== */
+
+#welcome-to-our-theme {
+    background-color: $bg-opacity;
+
+    /* 2.1 texte à gauche */
+
+    h2 {
+        font-size: 2.25em;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    p {
+        padding-bottom: 50px;
+        text-align: justify;
+    }
+}
+
+.texte-gauche h2:after {
+    display: block;
+    height: 2px;
+    background-color: $text-color;
+    width: 100px;
+    content: " ";
+    margin: 0 auto;
+    margin-top: 26px;
+    margin-bottom: 46px;
+}
+
+/* 2.2 image à droite */
+
+.image-droite img {
+    border: 2px solid $border-color;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    opacity: 1;
+    transition: 4s;
+
+    &:hover {
+        border: 2px solid $hover-color;
+        opacity: 0;
+    }
+}
+
+@media all and (max-width: 1366px) {
+
+    .image-droite img {
+        display: none;
+    }
+
+    .image-droite {
+        border: 2px solid $border-color;
+        background-image: url(ressources/images/02full.jpg);
+        @include background;
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 767px) {
+
+    .texte-gauche {
+        border: 2px solid $border-color;
+        background-image: url(ressources/images/02full.jpg);
+        @include background;
+        width: 100%;
+    }
+}
+
+/* ============================== 3. OUR INDUSTRIES ============================== */
+
+#our-industries {
+    background-color: $bg-opacity;
+
+    .pictogramme {
+        max-width: 1600px;
+    }
+
+    .case-our-industries {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 2.25em;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    p {
+        padding-bottom: 50px;
+    }
+
+    img {
+        border-radius: 50%;
+        transition: 0.75s;
+
+        &:hover {
+            box-shadow: 0 0 50px $hover-color, inset 0 0 100px black;
+        }
+    }
+
+    .shapes {
+        width: 100px;
+        margin-bottom: 20px;
+    }
+}
+
+/* ============================== 4. WE ADVICE YOU ============================== */
+
+#we-advice-you {
+    background-image: url(ressources/images/03.jpg);
+    @include background;
+    width: 100%;
+
+    .pictogramme {
+        max-width: 1600px;
+    }
+
+    h2 {
+        font-size: 2.25em;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    .case-we-advice-you {
+
+        h3 {
+            font-size: 4em;
+        }
+
+        p {
+            text-align: center;
+            padding-bottom: 50px;
+            font-size: 1.7em;
+        }
+    }
+}
+
+/* ============================== 5. MEAT OUR TEAM ============================== */
+
+#meat-our-team {
+    background-color: $bg-opacity;
+
+    .meat-our-team {
+        max-width: 1600px;
+    }
+
+    h2 {
+        font-size: 2.25em;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    h3 {
+        font-size: 1.35em;
+        margin-top: 20px;
+        text-align: left;
+        text-transform: none;
+    }
+
+    p {
+        font-size: 1em;
+        text-align: justify;
+    }
+
+    .team-phone {
+        padding-bottom: 50px;
+        text-align: left;
+        color: $href-color;
+    }
+}
+
+/* 5.1 photos */
+
+.meat-our-team-portrait {
+    text-align: center;
+
+    img {
+        width: 100%;
+        -webkit-transition: all 2s;
+        transition: all 2s;
+
+        &:hover {
+            -webkit-filter: grayscale(100%);
+            /* Pour les navigateurs Chrome, Safari, Opera */
+            filter: grayscale(100%);
+            /* Firefox */
+            padding: 25px;
+        }
+    }
+}
+
+/* 5.2 pictogrammes */
+
+.meat-our-team-picto {
+    text-align: center;
+
+    img {
+        width: 100%;
+        margin-left: 50px;
+        margin-right: 50px;
+        border-radius: 50%;
+        transition: 0.75s;
+
+        &:hover {
+            box-shadow: 0 0 50px $hover-color, inset 0 0 100px black;
+        }
+    }
+
+    .shapes {
+        width: 100px;
+        margin-bottom: 50px;
+    }
+}
+
+/* ============================== 6. WHAT PEOPLE SAY ============================== */
+
+#what-people-say {
+    background-color: $bg-opacity;
+
+    h2 {
+        font-size: 2.25em;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    h3 {
+        font-size: 1.35em;
+        text-transform: none;
+        margin-bottom: 10px;
+    }
+
+    p {
+        text-align: justify;
+        padding: 0 20px;
+        margin-top: 10px;
+        font-size: 1em;
+    }
+
+    .under-picture {
+        margin-top: 10px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+
+div .col-md-6 {
+    display: flex;
+    text-align: center;
+
+    .people-a,
+    .people-b,
+    .people-c,
+    .people-d {
+        border: 2px solid $border-color;
+        transition: 1s;
+
+        &:hover {
+            border: 2px solid $hover-color;
+            box-shadow: 0 0 25px $hover-color;
+        }
+    }
+
+    img {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+.mini-shapes {
+    width: 25px;
+}
+
+@media all and (max-width: 1580px) {
+
+    #what-people-say h3 {
+        margin-top: 50px;
+    }
+
+    div .col-md-6 {
+        border: 2px solid $border-color;
+        max-width: 48%;
+        min-width: 48%;
+    }
+
+    div .bg-people-a {
+        background-image: url(ressources/images/05a.jpg);
+        @include background;
+        @include bg-people;
+    }
+
+    div .bg-people-b {
+        background-image: url(ressources/images/05b.jpg);
+        @include background;
+        @include bg-people;
+    }
+
+    div .bg-people-c {
+        background-image: url(ressources/images/05c.jpg);
+        @include background;
+        @include bg-people;
+    }
+
+    div .bg-people-d {
+        background-image: url(ressources/images/05d.jpg);
+        @include background;
+        @include bg-people;
+    }
+
+    div .col-md-6 {
+        margin: center;
+    }
+
+    .people-a,
+    .people-b,
+    .people-c,
+    .people-d {
+        display: none;
+    }
+
+    .under-picture {
+        display: none;
+    }
+}
+
+@media all and (max-width: 910px) {
+
+    div .col-md-6 {
+        max-width: 95%;
+        min-width: 95%;
+    }
+}
+
+/* ============================== 7. FOOTER ============================== */
+
+#footer {
+    background-image: url(ressources/images/07.jpg);
+    @include background;
+    width: 100%;
+
+    /* 7.1 partie gauche */
+
+    h2 {
+        font-size: 2.75em;
+        padding-top: 100px;
+        padding-bottom: 25px;
+        text-align: left;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        padding-top: 80px;
+        padding-bottom: 25px;
+    }
+
+    h4 {
+        font-size: 1.5em;
+        text-transform: none;
+        text-align: left;
+    }
+
+    /* 7.1.1 partie texte */
+
+    .p-business {
+        text-align: justify;
+        margin-bottom: 80px;
+    }
+}
+
+.bloc-footer:after {
+    display: block;
+    height: 2px;
+    background-color: $text-color;
+    width: 90%;
+    content: " ";
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* 7.1.2 partie réseaux sociaux */
+
+.followers {
+    color: $href-color;
+
+    &:after {
+        display: block;
+        height: 2px;
+        background-color: $text-color;
+        width: 100%;
+        content: " ";
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+.pre-rezosocio {
+    line-height: 50px;
+}
+
+.rezosocio {
+    margin-left: 10px;
+    color: $href-color;
+
+    &:hover {
+        color: $hover-color;
+        text-shadow: 1px 1px 3px black;
+        margin-top: 1px;
+        transition: 0.5s;
+    }
+}
+
+/* 7.1.3 barre subscrise */
+
+.form {
+    display: flex;
+    margin-top: 30px;
+}
+
+.message {
+    width: 200px;
+}
+
+.button {
+    background-color: $href-color;
+    transition: 0.75s;
+
+    &:hover {
+
+        box-shadow: inset 0 15px 15px $hover-color;
+    }
+}
+
+/* 7.2 partie centrale */
+
+div .case-blog {
+    display: flex;
+    min-width: 100%;
+    padding: 0 15px;
+    margin: auto;
+    margin-bottom: 20px;
+
+    p {
+        text-align: center;
+    }
+
+    a {
+        width: 75%;
+    }
+
+    img {
+        border: 2px solid $border-color;
+        width: 100%;
+        transition: 1s;
+
+        &:hover {
+            border: 2px solid $hover-color;
+            box-shadow: 0 0 25px $hover-color;
+        }
+    }
+}
+
+.date {
+    color: $href-color;
+}
+
+@media all and (max-width: 1580px) {
+
+    div .bg-blog-a {
+        background-image: url(ressources/images/06a.jpg);
+        @include background;
+        margin: auto;
+        margin-bottom: 20px;
+        border: 2px solid $border-color;
+    }
+
+    div .bg-blog-b {
+        background-image: url(ressources/images/06b.jpg);
+        @include background;
+        margin: auto;
+        margin-bottom: 20px;
+        border: 2px solid $border-color;
+    }
+
+    div .bg-blog-c {
+        background-image: url(ressources/images/06c.jpg);
+        @include background;
+        margin: auto;
+        border: 2px solid $border-color;
+    }
+
+    .blog-a,
+    .blog-b,
+    .blog-c {
+        display: none;
+    }
+}
+
+/* 7.3 partie droite */
+
+div .total-rubik {
+    margin: 0;
+    padding: 0;
+}
+
+div .famille-details {
+    max-width: 33%;
+    padding: 0 0.5%;
+    margin: auto;
+}
+
+div .rubik {
+    padding: 0;
+    max-width: 100%;
+}
+
+.famille-details img {
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid $border-color;
+    width: 100%;
+    margin-bottom: 4%;
+    opacity: 1;
+    transition: 1s;
+
+    &:hover {
+        border: 2px solid $hover-color;
+        opacity: 0;
+    }
+}
+
+/* 7.4 ligne de copyright */
+
+div .copyright {
+    p {
+        margin: auto;
+        margin-bottom: 20px;
+        line-height: 30px;
+        width: 175px;
+        text-align: center;
+    }
+
+    .realisation {
+        width: 250px;
+    }
+
+    .mail {
+        color: $href-color;
+
+        &:hover {
+            @include hover;
+            font-size: 110%;
+        }
+    }
+}
